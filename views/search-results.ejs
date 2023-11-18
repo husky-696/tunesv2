@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search for Music.Soft tunes</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon"> <!-- Replace with your favicon path -->
+    <link rel="stylesheet" href="/css/search-results.css"> <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- Font Awesome CSS -->
+</head>
+<body>
+    <div id="back-button">
+        <li><a href="/homepage" title="Home"><i class="fas fa-arrow-left"></i></a></li></div>
+    </div>
+    <div class="search-container">
+        <h1>Search for Music</h1>
+        <div id="search-box">
+            <form class="form" method="post" action="/search">
+                <input type="text" name="query" placeholder="Enter a song, artist, or album">
+                <button type="submit">Search</button>
+            </form>            
+        </div>
+    </div>
+    <!-- Add a container for search results -->
+    <div class="search-results-container">
+        <h2>Search Results</h2>
+        <div class="card-grid">
+            <% searchResults.forEach(result => { %>
+                <div class="card" data-audio="<%= result.audioUrl %>">
+                    <img src="<%= result.album.cover_medium %>" alt="<%= result.title %>">
+                    <div class="info">
+                        <p><strong>Artist:</strong> <%= result.artist.name %></p>
+                        <p><strong>Title:</strong> <%= result.title %></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<!-- Audio player with controls -->
+<div id="music-player">
+    <audio id="audio-player" controls>
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<!-- JavaScript for handling audio playback and floating player visibility -->
+<script>
+    const audioPlayer = document.getElementById('audio-player');
+    const searchResultCards = document.querySelectorAll('.card');
+    const musicPlayer = document.getElementById('music-player');
+
+    searchResultCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const audioUrl = card.getAttribute('data-audio');
+
+            if (audioPlayer.paused || audioPlayer.src !== audioUrl) {
+                audioPlayer.src = audioUrl;
+                audioPlayer.play();
+                musicPlayer.style.opacity = 1; // Show the floating player
+            } else {
+                audioPlayer.pause();
+            }
+        });
+    });
+
+    audioPlayer.addEventListener('ended', () => {
+        musicPlayer.style.opacity = 0; // Hide the floating player when the song is completed
+    });
+</script>
+</body>
+</html>

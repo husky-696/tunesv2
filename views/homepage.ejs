@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home.Soft tunes</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon"> <!-- Replace with your favicon path -->
+    <link rel="stylesheet" href="/css/homepage.css"> <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- Font Awesome CSS -->
+</head>
+<body>
+    <div id="header">
+        <img src="img/logo.png" alt="Your Logo">
+        <div id="search-bar">
+            <a href="search.html" title="Search"><i class="fas fa-search"></i></a>
+        </div>
+    </div>
+
+    <div id="navigation">
+        <ul>
+            <li><a href="/homepage" title="Home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="search.html" title="Search"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="/profile" title="Profile"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </div>
+
+    <!-- Trending Songs Section -->
+    <div id="trending-songs">
+<!-- EJS template (homepage.ejs) -->
+<div id="trending-songs">
+    <h2>Trending Songs</h2>
+    <div class="song-grid">
+        <!-- Display trending songs here -->
+        <% trendingSongs.forEach(song => { %>
+            <div class="song-card" data-audio="<%= song.preview %>">
+                <!-- Song details and cover image -->
+                <img src="<%= song.album.cover_medium %>" alt="<%= song.title %>">
+                <p><strong>Artist:</strong> <%= song.artist.name %></p>
+                <p><strong>Title:</strong> <%= song.title %></p>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<!-- JavaScript for handling audio playback (in homepage.ejs) -->
+<script>
+    let currentAudio = null;
+
+    const songCards = document.querySelectorAll('.song-card');
+
+    songCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const audioUrl = card.getAttribute('data-audio');
+
+            if (audioUrl) {
+                if (currentAudio && currentAudio.src === audioUrl) {
+                    if (!currentAudio.paused) {
+                        currentAudio.pause();
+                    }
+                    currentAudio = null;
+                } else {
+                    if (currentAudio) {
+                        currentAudio.pause();
+                    }
+
+                    const audioPlayer = new Audio(audioUrl);
+                    audioPlayer.play();
+                    currentAudio = audioPlayer;
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login.Soft tunes</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon"> <!-- Replace with your favicon path -->
+    <link rel="stylesheet" href="/css/login.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Login</h1>
+        <form class="form" method="post" action="/login">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register here</a></p> <!-- Added registration link -->
+    </div>
+</body>
+</html>

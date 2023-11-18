@@ -1,0 +1,81 @@
+/* search-results.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #C7BEF3; /* Purple background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* Text color on the purple background */
+}
+
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff; /* White color for the back button */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+/* Modify the search container styles to make it wider */
+.search-container {
+    background-color: #C7BEF3; /* Slightly transparent purple background */
+    width: 600px; /* Increase the width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.677);
+    color: #fff; /* White text color for better contrast */
+    margin-top: 40px; /* Added some margin for better separation from the header */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0; /* Added some margin for better spacing */
+}
+
+#search-box {
+    padding: 10px;
+    background-color: #0e0e0ef9; /* Light purple background with some black accents */
+    border-radius: 10px; /* Matched border radius with the container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Added some margin for better separation from the header */
+}
+
+input[type="text"] {
+    flex: 1;
+    width: 470px; /* Adjusted width for the input field */
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Adjusted border radius for the input field */
+    font-size: 16px; /* Increased font size for better visibility */
+}
+
+button {
+    background-color: #C7BEF3; /* Purple color for the button */
+    color: #fff; /* White text color for better contrast */
+    border: none;
+    border-radius: 5px; /* Matched border radius with the input field */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5926de; /* Darker purple on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+}

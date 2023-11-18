@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile.Soft tunes</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon"> <!-- Replace with your favicon path -->
+    <link rel="stylesheet" href="/css/profile.css"> <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- Font Awesome CSS -->
+    <script src="/js/profile.js"></script> <!-- Link your JavaScript file here -->
+    <script src="/js/popup.js"></script> <!-
+</head>
+<body>
+    <div id="back-button">
+        <li><a href="/homepage" title="Home"><i class="fas fa-arrow-left"></i></a></li></div>
+    <div class="container">
+        <div id="user-profile">
+            <div id="user-avatar">
+                <label for="profilePicture" class="avatar-label">
+                <img src="/user/<%= user._id %>" alt="Profile Picture">
+            </label>
+
+            </div>
+        
+            <div id="user-info">
+                <h1><%= userName %></h1>
+                <!-- Other user information here -->
+            </div>
+        </div>
+        <div id="popup-container"></div>
+    </div>
+    <div id="upload-button">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <button type="submit" class="custom-upload-button">Upload Profile Picture</button>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" style="display: none;">
+        </form>
+    </div>
+    <div id="error-message">
+        <div id="error-text"></div>
+        <button id="close-error">Close</button>
+    </div>
+
+
+    <!-- Add a logout button at the top corner -->
+    <div id="logout-button">
+        <li><a href="/logout" title="Home"><i class="fas fa-sign-out-alt"></i></a></li>
+    </div>
+    <div id="user-tabs">
+        <ul>
+            <li class="active" onclick="showTab('music')">Music</li>
+            <li onclick="showTab('playlists')">Playlists</li>
+        </ul>
+    </div>
+    <!-- ... previous HTML content ... -->
+    <div id="tab-content">
+        <div id="music-tab" class="content-tab">
+            <!-- Two cards for liked music with pfp and info side by side -->
+            <div class="card">
+                <div class="info">
+                    <h2>Coming Soon</h2> <!-- Corrected "Comming" to "Coming" -->
+                    <p>....</p>
+                </div>
+            </div>
+        </div>
+        <div id="playlists-tab" class=" content-tab" style="display: none;">
+            <!-- Two cards for playlists with pfp and info side by side -->
+            <div class="card">
+                <div class="info">
+                    <h2>Coming Soon</h2> <!-- Corrected "Comming" to "Coming" -->
+                    <p>....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

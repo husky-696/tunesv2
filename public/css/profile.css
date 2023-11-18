@@ -1,0 +1,177 @@
+/* profile.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #fff; /* Text color on the purple background */
+    margin: 0;
+    padding: 0;
+    background-color: #C7BEF3; /* Purple background covers the full screen */
+}
+
+.container {
+    background-color: #C7BEF3; /* Set the background color for the user info and profile picture area */
+}
+
+#user-profile {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#user-avatar img {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.count {
+    font-size: 18px;
+}
+
+.label {
+    font-size: 14px;
+}
+
+#user-tabs ul {
+    list-style-type: none;
+    display: flex;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+#user-tabs li {
+    flex: 1;
+    padding: 15px 0;
+    cursor: pointer;
+    color: #fff; /* Text color on the purple background */
+    text-align: center;
+    border: 1px solid #030303;
+}
+
+#user-tabs li.active {
+    background-color: #C7BEF3;
+    color: #fff; /* Purple color for the active tab */
+}
+
+#tab-content {
+    padding: 20px;
+    padding-left: 609px; /* Add some left padding for spacing */
+    background-color: #bcbabab4; /* Set a consistent background color for all cards */
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ... previous CSS content ... */
+.card {
+    width: 100%; /* Adjust the width for wider cards */
+    height: 160px; /* Set a fixed height for all cards */
+    margin: 20px 0;
+    background-color: #0e0d0d; /* Set a consistent background color for all cards */
+    border: 1px solid #090909;
+    border-radius: 5px;
+    padding: 20px;
+    padding-left: 40px; /* Add some left padding for spacing */
+    box-shadow: 0 0 5px hsla(0, 2%, 9%, 0.1);
+    display: flex; /* Use flexbox to align pfp and info side by side */
+    text-align: center;
+}
+
+/* ... rest of the CSS ... */
+
+
+.card img {
+    width: 50%; /* Adjust the width for the pfp */
+    border-radius: 40px;
+}
+
+.info {
+    width: 80%; /* Adjust the width for the info */
+    padding-left: 40px; /* Add some left padding for spacing */
+    padding-right: 40px; /* Add some left padding for spacing */
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff; /* White color for the back button */
+    text-decoration: none;
+    font-size: 24px;
+    
+}
+
+
+#logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff; /* White color for the back button */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.custom-upload-button {
+    display: inline-block;
+    bottom: 20;;
+    padding: 10px 20px;
+    background-color: #292e34;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.upload-label:hover {
+    background-color:#645c763a;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+}
+
+#error-message {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#close-error {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    float: right;
+}
+ 

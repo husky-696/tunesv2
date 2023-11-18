@@ -1,0 +1,88 @@
+/* login.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #fff; /* Text color on the lighter background */
+    margin: 0;
+    padding: 0;
+    background-color: #C7BEF3; /* Lighter background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff; /* Set the background color for the login container */
+    width: 400px; /* Adjust the width for a larger login box */
+    padding: 30px 50px; /* Increase the right padding for more space inside the box */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #000; /* Black text color */
+}
+
+.form {
+    text-align: center; /* Center-align the form content */
+}
+
+.input-group {
+    margin: 30px 0;
+    text-align: center; /* Left-align the input elements within the group */
+}
+
+label {
+    color: #000; /* Black text color */
+    display: block; /* Place labels on separate lines */
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    background-color: #eee; /* Light gray background color */
+    border: 1px solid #333; /* Darker border color */
+    border-radius: 5px;
+    color: #000; /* Black text color */
+}
+
+button {
+    width: 65.4%;
+    padding: 10px 15px; /* Add left padding to the button */
+    background-color: #C7BEF3; /* Purple color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #331166; /* Darker purple color for the button on hover */
+}
+
+a {
+    color: #C7BEF3; /* Purple color for the link */
+    text-decoration: none; /* Remove the underline from the link */
+    display: block; /* Center-align the link */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+p {
+    color: #C7BEF3; /* Purple color for the link */
+
+}

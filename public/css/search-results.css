@@ -1,0 +1,150 @@
+/* search-results.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #C7BEF3; /* Purple background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #070707; /* Text color on the purple background */
+}
+
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff; /* White color for the back button */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+/* Modify the search container styles to make it wider */
+.search-container {
+    background-color: #C7BEF3; /* Slightly transparent purple background */
+    width: 600px; /* Increase the width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.677);
+    color: #fff; /* White text color for better contrast */
+    margin-top: 40px; /* Added some margin for better separation from the header */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0; /* Added some margin for better spacing */
+}
+
+#search-box {
+    padding: 10px;
+    background-color: #f0f0f0; /* Light purple background with some black accents */
+    border-radius: 10px; /* Matched border radius with the container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Added some margin for better separation from the header */
+}
+
+input[type="text"] {
+    flex: 1;
+    width: 470px; /* Adjusted width for the input field */
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Adjusted border radius for the input field */
+    font-size: 16px; /* Increased font size for better visibility */
+}
+
+button {
+    background-color: #C7BEF3; /* Purple color for the button */
+    color: #fff; /* White text color for better contrast */
+    border: none;
+    border-radius: 5px; /* Matched border radius with the input field */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5926de; /* Darker purple on hover */
+}
+
+
+.search-results-container {
+    margin-top: 20px; /* Add margin to separate search results from the search box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C7BEF3; /* Adjust the background color */
+    padding: 20px; /* Add padding to the search results container */
+    border-radius: 20px; /* Adjust the border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.779);
+    width: 1200px;
+    margin: 25;
+}
+
+/* Style search results header */
+.search-results-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Adjust card grid styles for multiple lines */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    /* Adjust max-width and margin to center-align the grid */
+    max-width: 800px;
+    margin: 20 auto;
+}
+
+.card {
+    width: 80%;
+    background-color: #f0f0f0;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px hsla(0, 2%, 9%, 0.1);
+    text-align: center;
+    margin-bottom: 20px; /* Adjust the margin to add space between search results */
+}
+
+.card img {
+    max-width: 100%; /* Adjust the image width to fit within the card */
+    max-height: 200px; /* Limit the maximum height of the images */
+}
+
+        /* Add some styling for the floating music player */
+        #music-player {
+            position: fixed;
+            bottom: 0;
+            left: 20;
+            width: 80%;
+            background-color: #33333300;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            padding-left: 10;
+            opacity: 0;
+            transition: opacity 0.8s;
+            z-index: 1;
+        }
+
+        /* Style the audio player controls */
+        #audio-player {
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            display: inline;
+            margin: 0 20px;
+        }
